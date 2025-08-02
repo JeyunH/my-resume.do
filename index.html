@@ -2,119 +2,176 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>홍길동 - 개발자 이력서</title>
+  <title>모빌리티·AI·IoT 개발자 이력서</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
     body {
-      font-family: 'Roboto', Arial, sans-serif;
-      background: #f4f6fb;
-      color: #222;
+      background: #f7fafd;
+      color: #23272f;
       margin: 0; padding: 0;
+      font-family: 'Roboto', Arial, sans-serif;
     }
     .container {
-      max-width: 720px;
-      margin: 40px auto 40px auto;
+      max-width: 800px;
+      margin: 36px auto 36px auto;
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-      padding: 36px 44px 40px 44px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(25,40,75,.15);
+      padding: 42px 38px 30px 38px;
     }
-    h1 {
-      color: #007acc;
-      margin-bottom: 8px;
-    }
-    .contact {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 22px;
-    }
+    h1 { color: #0074d9; margin-bottom: 2px; }
+    .info { font-size: 15px; color: #444; margin-bottom: 18px; }
+    .section { margin: 30px 0 16px 0; }
     h2 {
-      color: #005f99;
-      border-bottom: 1.5px solid #eee;
-      padding-bottom: 3px;
-      margin-top: 30px; margin-bottom: 12px;
-      letter-spacing: 0.5px;
+      color: #016699;
+      border-left: 6px solid #d3eeff;
+      padding-left: 10px;
+      margin-bottom: 13px;
     }
-    .skills-list, .project-list, .career-list {
-      list-style: none;
-      margin: 0; padding: 0;
-    }
-    .skills-list li {
+
+    .tags { margin-bottom: 7px;}
+    .tag {
       display: inline-block;
-      background: #e5f3ff;
-      color: #007acc;
-      border-radius: 4px;
-      padding: 4px 9px;
-      margin: 2px 6px 2px 0;
+      background: #d3eeff;
+      color: #016699;
+      padding: 4px 12px;
+      border-radius: 14px;
       font-size: 13px;
+      margin-right: 6px;
+      margin-bottom: 2px;
     }
-    .career-list li, .project-list li {
-      margin-bottom: 8px;
+    ul, li { margin: 0; padding: 0;}
+    li { margin-left: 18px; margin-bottom: 8px;}
+
+    .accordion {
+      background: #f1f6f9;
+      color: #186393;
+      cursor: pointer;
+      padding: 12px 24px 12px 12px;
+      border: none;
+      outline: none;
+      width: 100%;
+      text-align: left;
+      font-size: 17px;
+      font-weight: bold;
+      border-radius: 7px;
+      margin-bottom: 10px;
+      transition: background 0.2s;
     }
-    .school {
-      margin-top: 8px;
-      font-weight: 500;
-      font-size: 15px;
+    .accordion.open, .accordion:hover {
+      background: #c6e3f7;
     }
-    @media (max-width: 768px) {
-      .container { padding: 12px 8px; }
+    .panel {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background: #f9fcff;
+      border-left: 3px solid #c6e3f7;
+      margin-top: -6px;
+      margin-bottom: 16px;
+      padding: 0 14px;
     }
-    /* 추가 이미지나 색 포인트도 직접 넣을 수 있음 */
+    .panel.open {
+      max-height: 900px;
+      padding-top: 14px;
+      opacity: 1;
+    }
+    /* 반응형 */
+    @media (max-width: 600px) {
+      .container { padding: 10px 3vw; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>홍길동</h1>
-    <div class="contact">
-      Email: hong@example.com &nbsp; | &nbsp; GitHub: github.com/hong-gildong
+    <h1>모빌리티·AI·IoT 개발자</h1>
+    <div class="info">
+      <b>주소</b>: 경기 남양주시 다산동 6110, 6402동 2008호<br>
+      <b>E-mail</b>: <i>(입력 필요)</i><br>
+      <b>학점</b>: 3.78/4.5
     </div>
 
-    <section>
-      <h2>프로필</h2>
-      <p>
-        웹 프론트엔드/백엔드 개발자.<br>
-        React, Node.js 기반 프로젝트 경험 다수.<br>
-        협업 및 코드 품질에 높은 가치 부여.
-      </p>
-    </section>
+    <div class="tags">
+      <span class="tag">기계공학</span>
+      <span class="tag">디자인</span>
+      <span class="tag">AI</span>
+      <span class="tag">Java</span>
+      <span class="tag">Python</span>
+      <span class="tag">IoT</span>
+      <span class="tag">HMI</span>
+      <span class="tag">UX</span>
+      <span class="tag">융합제품</span>
+    </div>
 
-    <section>
-      <h2>기술 스택</h2>
-      <ul class="skills-list">
-        <li>JavaScript (ES6+)</li>
-        <li>TypeScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>MySQL</li>
-        <li>MongoDB</li>
-        <li>Docker</li>
-        <li>AWS</li>
-        <li>Git</li>
+    <div class="section">
+      <h2>희망분야·관심기술</h2>
+      <ul>
+        <li>AI 기반 모빌리티 UX·HMI 소프트웨어 개발 (기계공학+디자인+AI+프로그래밍 융합)</li>
+        <li>IoT + AI 기반 융합 제품 개발(스마트 디바이스, 특허 경험, 아두이노, 센서 및 무선통신/앱/카메라/YOLO 등 경험)</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
-      <h2>경력</h2>
-      <ul class="career-list">
-        <li><b>ABC 테크</b> – 프론트엔드 개발자<br><small style="color:#666">2022.03 ~ 2024.12</small></li>
-        <li><b>XYZ 스타트업</b> – 백엔드 개발자<br><small style="color:#666">2021.01 ~ 2022.02</small></li>
+    <div class="section">
+      <h2>학력·소속</h2>
+      <ul>
+        <li>기술과디자인연구센터 (대학원 졸업, 2022.03.02~2024.08.21)</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
-      <h2>프로젝트</h2>
-      <ul class="project-list">
-        <li><b>쇼핑몰 플랫폼 개발</b> - 결제/제품 등록/사용자 리뷰 기능 구현</li>
-        <li><b>포트폴리오 사이트 개발</b> - 반응형 UI, CI/CD 자동화</li>
+    <div class="section">
+      <h2>기술스택</h2>
+      <ul>
+        <li><b>언어:</b> Java, Python, JavaScript, SQL, Shell Script (Bash), C</li>
+        <li><b>프레임워크:</b> Spring, MyBatis</li>
+        <li><b>경험 분야:</b> 기계 설계/공학 프로그래밍/자동화/기계 제작/금형</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
-      <h2>학력</h2>
-      <div class="school">서울대학교 컴퓨터공학과 (2017 ~ 2021)</div>
-    </section>
+    <div class="section">
+      <h2>자격증</h2>
+      <ul>
+        <li>일반기계기사</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>주요 프로젝트</h2>
+      <ul>
+        <li>
+          <b>석사 프로젝트:</b><br>
+          도시텃밭 사용자를 위한 메타버스 커뮤니티 플랫폼 앱 [새싹광장]<br>
+          서비스 기획, UX 방법론 기반 앱 설계, 프로토타이핑 참여
+        </li>
+        <li>
+          <b>SW 융합 팀 프로젝트 (진행중)</b><br>
+          역할 : 선임연구원
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <button class="accordion">산학연구/특허 및 세부경험 보기</button>
+      <div class="panel">
+        <p>
+          <b>IoT 제품 개발 특허 경험(스마트 수도꼭지)</b><br>
+          - 아두이노, 센서 제어, 무선 통신, 앱 개발(MIT Inventor), 카메라 인식, YOLO 활용 등 다양한 하드웨어·소프트웨어 융합 개발 경험을 보유함.
+        </p>
+        <!-- 이외 구체 내용이 많으면 이 영역에 항목별로 추가 작성 가능 -->
+      </div>
+    </div>
   </div>
+  <script>
+    // 아코디언 JS
+    document.querySelectorAll('.accordion').forEach(btn => {
+      btn.addEventListener('click', function() {
+        this.classList.toggle('open');
+        let panel = this.nextElementSibling;
+        panel.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
 
