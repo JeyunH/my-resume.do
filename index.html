@@ -2,176 +2,402 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>모빌리티·AI·IoT 개발자 이력서</title>
+  <title>황제윤 | AI·IoT·모빌리티 개발자 이력서</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI 기반 모빌리티, IoT 융합 제품 개발자를 꿈꾸는 황제윤의 이력서입니다.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+    :root {
+      --primary-color: #2980b9;
+      --secondary-color: #2c3e50;
+      --light-gray: #f4f7f9;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --border-color: #e0e0e0;
+    }
     body {
-      background: #f7fafd;
-      color: #23272f;
+      background-color: var(--light-gray);
+      color: var(--text-color);
       margin: 0; padding: 0;
-      font-family: 'Roboto', Arial, sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
+      line-height: 1.7;
     }
     .container {
-      max-width: 800px;
-      margin: 36px auto 36px auto;
-      background: #fff;
+      max-width: 1200px;
+      margin: 30px auto;
+      background: var(--card-bg);
       border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(25,40,75,.15);
-      padding: 42px 38px 30px 38px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
     }
-    h1 { color: #0074d9; margin-bottom: 2px; }
-    .info { font-size: 15px; color: #444; margin-bottom: 18px; }
-    .section { margin: 30px 0 16px 0; }
+    /* --- Header --- */
+    header {
+      background: linear-gradient(135deg, #2980b9, #49c9f8);
+      color: white;
+      padding: 40px 50px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 50% 25%;
+      border: 4px solid white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .header-text h1 {
+      margin: 0;
+      font-size: 2.8em;
+      font-weight: 700;
+    }
+    .header-text p {
+      margin: 5px 0 0 0;
+      font-size: 1.3em;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+    /* --- Contact Info Bar --- */
+    .contact-info-bar {
+        background: #34495e;
+        color: white;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .contact-info-bar a {
+        color: white;
+        text-decoration: none;
+        transition: opacity 0.3s;
+    }
+    .contact-info-bar a:hover { opacity: 0.8; }
+    .contact-info-bar span { font-size: 1em; }
+    .contact-info-bar i { margin-right: 10px; }
+    
+    /* --- Main Content --- */
+    .main-content {
+      padding: 40px 50px;
+    }
+    /* --- Full-width About Section --- */
+    .about-section-fullwidth {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .about-section-fullwidth p {
+        font-size: 1.1em;
+        display: inline-block;
+        text-align: left;
+        padding: 15px 25px;
+        background: #e4f1fa;
+        border-radius: 8px;
+        border-left: 5px solid var(--primary-color);
+    }
+    /* --- 2-Column Grid --- */
+    .main-grid {
+      display: flex;
+      gap: 40px;
+    }
+    .left-column {
+      flex: 4; /* 40% width */
+    }
+    .right-column {
+      flex: 6; /* 60% width */
+      border-left: 1px solid var(--border-color);
+      padding-left: 40px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
     h2 {
-      color: #016699;
-      border-left: 6px solid #d3eeff;
-      padding-left: 10px;
-      margin-bottom: 13px;
+      font-size: 1.8em;
+      color: var(--secondary-color);
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
     }
-
-    .tags { margin-bottom: 7px;}
+    h2 i {
+      margin-right: 15px;
+      font-size: 0.9em;
+    }
+    h3 {
+      font-size: 1.4em;
+      color: var(--primary-color);
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    /* --- Skills Section --- */
+    .skill-category h4 {
+      font-size: 1.1em;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
     .tag {
       display: inline-block;
-      background: #d3eeff;
-      color: #016699;
-      padding: 4px 12px;
-      border-radius: 14px;
-      font-size: 13px;
-      margin-right: 6px;
-      margin-bottom: 2px;
+      background: #eaf1f6;
+      color: #555;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.95em;
+      margin: 4px;
+      font-weight: 500;
+      transition: all 0.3s;
     }
-    ul, li { margin: 0; padding: 0;}
-    li { margin-left: 18px; margin-bottom: 8px;}
-
-    .accordion {
-      background: #f1f6f9;
-      color: #186393;
-      cursor: pointer;
-      padding: 12px 24px 12px 12px;
-      border: none;
-      outline: none;
-      width: 100%;
-      text-align: left;
-      font-size: 17px;
-      font-weight: bold;
-      border-radius: 7px;
-      margin-bottom: 10px;
-      transition: background 0.2s;
+    .tag:hover { background: var(--primary-color); color: white; }
+    /* --- Timeline --- */
+    .timeline { position: relative; padding-left: 25px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 0; top: 5px;
+      bottom: 5px; width: 3px; background-color: #dbe4f0;
     }
-    .accordion.open, .accordion:hover {
-      background: #c6e3f7;
+    .timeline-item { position: relative; margin-bottom: 25px; }
+    .timeline-item::before {
+      content: ''; position: absolute; left: -31px; top: 6px;
+      width: 15px; height: 15px; border-radius: 50%;
+      background-color: white; border: 3px solid var(--primary-color);
     }
-    .panel {
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      background: #f9fcff;
-      border-left: 3px solid #c6e3f7;
-      margin-top: -6px;
-      margin-bottom: 16px;
-      padding: 0 14px;
+    .timeline-item h4 {
+      margin: 0 0 5px 0; font-size: 1.25em; color: var(--secondary-color);
     }
-    .panel.open {
-      max-height: 900px;
-      padding-top: 14px;
-      opacity: 1;
+    .timeline-item h4 span {
+      font-weight: 400; font-size: 0.9em; color: #777; margin-left: 10px;
     }
-    /* 반응형 */
-    @media (max-width: 600px) {
-      .container { padding: 10px 3vw; }
+    .timeline-period {
+      font-size: 0.9em; color: #777; margin-bottom: 10px; font-style: italic;
+    }
+    .timeline-content ul { padding-left: 20px; list-style-type: '– '; }
+    .timeline-content li { margin-bottom: 8px; }
+    /* --- Projects Section --- */
+    .project-card {
+      background: #fcfdff; border: 1px solid var(--border-color);
+      border-radius: 8px; padding: 20px; margin-bottom: 20px;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+    .project-card h4 { margin: 0 0 10px 0; font-size: 1.2em; color: var(--secondary-color); }
+    .project-card .project-meta { font-size: 0.9em; color: #666; margin-bottom: 15px; }
+    .project-card .project-meta span { margin-right: 15px; }
+    .project-card .project-meta i { margin-right: 5px; }
+    .project-card p, .project-card ul { margin: 0; }
+    .project-card ul { padding-left: 20px; margin-top: 10px; }
+    .project-card strong { color: var(--primary-color); }
+    /* --- Certifications --- */
+    .cert-list { padding-left: 20px; }
+    .cert-list li { margin-bottom: 8px; }
+    /* --- Footer --- */
+    footer {
+      text-align: center; padding: 25px; background: var(--light-gray);
+      font-size: 0.9em; color: #888; border-top: 1px solid var(--border-color);
+    }
+    /* --- Responsive Design --- */
+    @media (max-width: 1024px) {
+      .main-grid { flex-direction: column; }
+      .right-column { border-left: none; padding-left: 0; }
+    }
+    @media (max-width: 768px) {
+      header { flex-direction: column; text-align: center; }
+      .main-content { padding: 30px; }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <h1>모빌리티·AI·IoT 개발자</h1>
-    <div class="info">
-      <b>주소</b>: 경기 남양주시 다산동<br>
-      <b>E-mail</b>: <i>(입력 필요)</i><br>
-      <b>학점</b>: 3.78/4.5
-    </div>
-
-    <div class="tags">
-      <span class="tag">기계공학</span>
-      <span class="tag">디자인</span>
-      <span class="tag">AI</span>
-      <span class="tag">Java</span>
-      <span class="tag">Python</span>
-      <span class="tag">IoT</span>
-      <span class="tag">HMI</span>
-      <span class="tag">UX</span>
-      <span class="tag">융합제품</span>
-    </div>
-
-    <div class="section">
-      <h2>희망분야·관심기술</h2>
-      <ul>
-        <li>AI 기반 모빌리티 UX·HMI 소프트웨어 개발 (기계공학+디자인+AI+프로그래밍 융합)</li>
-        <li>IoT + AI 기반 융합 제품 개발(스마트 디바이스, 특허 경험, 아두이노, 센서 및 무선통신/앱/카메라/YOLO 등 경험)</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>학력·소속</h2>
-      <ul>
-        <li>기술과디자인연구센터 (대학원 졸업, 2022.03.02~2024.08.21)</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>기술스택</h2>
-      <ul>
-        <li><b>언어:</b> Java, Python, JavaScript, SQL, Shell Script (Bash), C</li>
-        <li><b>프레임워크:</b> Spring, MyBatis</li>
-        <li><b>경험 분야:</b> 기계 설계/공학 프로그래밍/자동화/기계 제작/금형</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>자격증</h2>
-      <ul>
-        <li>일반기계기사</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>주요 프로젝트</h2>
-      <ul>
-        <li>
-          <b>석사 프로젝트:</b><br>
-          도시텃밭 사용자를 위한 메타버스 커뮤니티 플랫폼 앱 [새싹광장]<br>
-          서비스 기획, UX 방법론 기반 앱 설계, 프로토타이핑 참여
-        </li>
-        <li>
-          <b>SW 융합 팀 프로젝트 (진행중)</b><br>
-          역할 : 선임연구원
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <button class="accordion">산학연구/특허 및 세부경험 보기</button>
-      <div class="panel">
-        <p>
-          <b>IoT 제품 개발 특허 경험(스마트 수도꼭지)</b><br>
-          - 아두이노, 센서 제어, 무선 통신, 앱 개발(MIT Inventor), 카메라 인식, YOLO 활용 등 다양한 하드웨어·소프트웨어 융합 개발 경험을 보유함.
-        </p>
-        <!-- 이외 구체 내용이 많으면 이 영역에 항목별로 추가 작성 가능 -->
+    <header>
+      <img src="images/ID_picture.jpg" alt="증명사진" class="profile-pic">
+      <div class="header-text">
+        <h1>황제윤</h1>
+        <p>AI · 웹 · IoT 개발자</p>
       </div>
+    </header>
+    
+    <div class="contact-info-bar">
+      <span><i class="fas fa-phone"></i> 010-4619-8834</span>
+      <span><a href="mailto:his8835@gmail.com"><i class="fas fa-envelope"></i> his8835@gmail.com</a></span>
+      <span><a href="https://github.com/JeyunH" target="_blank"><i class="fab fa-github"></i> github.com/JeyunH</a></span>
     </div>
+    
+    <main class="main-content">
+      <!-- Full-width About Section -->
+      <section class="section about-section-fullwidth">
+        <h2><i class="fas fa-user"></i> About</h2>
+        <p>저는 기계공학(H/W), AI 프로그래밍(S/W), 그리고 사용자 중심 디자인(UX)의 교차점에서 새로운 가치를 만드는 개발자입니다.<br>견고한 하드웨어 지식 위에 논리적인 소프트웨어를 설계하고, 그 중심에 항상 사용자를 두어 기술이 실질적인 편의로 이어지게 합니다.<br>이러한 강점을 바탕으로 미래 모빌리티와 스마트 라이프를 선도할 제품을 만들고 싶습니다.</p>
+      </section>
+
+      <!-- 2-Column Grid -->
+      <div class="main-grid">
+        <!-- Left Column -->
+        <aside class="left-column">
+          <section class="section">
+            <h2><i class="fas fa-cogs"></i> 기술 스택</h2>
+            
+            <div class="skill-category">
+              <h4><i class="fas fa-code"></i> 언어 (Languages)</h4>
+              <p><span class="tag">Java</span> <span class="tag">Python</span> <span class="tag">JavaScript</span> <span class="tag">SQL</span> <span class="tag">C</span> <span class="tag">Bash</span></p>
+            </div>
+
+            <div class="skill-category">
+              <h4><i class="fas fa-server"></i> 백엔드 (Backend)</h4>
+              <p><span class="tag">Spring</span> <span class="tag">MyBatis</span> <span class="tag">JDBC</span> <span class="tag">Maven</span> <span class="tag">Apache Tomcat</span></p>
+            </div>
+
+            <div class="skill-category">
+              <h4><i class="fas fa-desktop"></i> 프론트엔드 (Frontend)</h4>
+              <p><span class="tag">HTML5</span> <span class="tag">CSS3</span> <span class="tag">JSP</span> <span class="tag">JSTL & EL</span></p>
+            </div>
+
+            <div class="skill-category">
+              <h4><i class="fas fa-brain"></i> AI/데이터 과학 (AI/Data Science)</h4>
+              <p><span class="tag">PyTorch</span> <span class="tag">TensorFlow</span> <span class="tag">Pandas</span> <span class="tag">NumPy</span> <span class="tag">YOLOv8</span></p>
+            </div>
+
+            <div class="skill-category">
+              <h4><i class="fas fa-database"></i> 데이터베이스 (Database)</h4>
+              <p><span class="tag">Oracle SQL</span> <span class="tag">MySQL</span> <span class="tag">DBeaver</span></p>
+            </div>
+
+            <!-- [추가] 버전 관리 섹션 -->
+            <div class="skill-category">
+              <h4><i class="fas fa-code-branch"></i> 버전 관리 (Version Control)</h4>
+              <p><span class="tag">Git</span> <span class="tag">GitHub</span></p>
+            </div>
+
+            <!-- [수정] 도구/환경 섹션 -->
+            <div class="skill-category">
+              <h4><i class="fas fa-tools"></i> 개발 도구 및 환경 (Tools & Env)</h4>
+              <p><span class="tag">Linux</span> <span class="tag">VirtualBox</span> <span class="tag">MobaXterm</span> <span class="tag">Eclipse</span> <span class="tag">VS Code</span> <span class="tag">IntelliJ</span> <span class="tag">Jupyter Notebook</span></p>
+            </div>
+        </section>
+
+          <section class="section">
+            <h2><i class="fas fa-graduation-cap"></i> 학력</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h4>한국폴리텍대학 하이테크과정 <span>(진행중)</span></h4>
+                <p class="timeline-period">2025.03 ~ 진행중</p>
+                <div class="timeline-content"><p>인공지능소프트웨어과</p></div>
+              </div>
+              <div class="timeline-item">
+                  <h4>국민대학교 테크노디자인전문대학원 <span>석사</span></h4>
+                  <p class="timeline-period">2022.03 ~ 2024.08</p>
+                  <div class="timeline-content"><p>AI디자인전공 (4.25/4.5)</p></div>
+              </div>
+              <div class="timeline-item">
+                  <h4>서울과학기술대학교 <span>학사</span></h4>
+                  <p class="timeline-period">2011.03 ~ 2017.08</p>
+                  <div class="timeline-content"><p>기계시스템디자인공학과 (3.78/4.5)</p></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2><i class="fas fa-award"></i> 자격증 및 어학</h2>
+            <ul class="cert-list">
+                <li>ADsP (데이터분석 준전문가)</li>
+                <li>SQLD (SQL 개발자)</li>
+                <li>정보처리기사 (필기 합격)</li>
+                <li>일반기계기사</li>
+                <li>워드프로세서 1급</li>
+                <li>Toeic Speaking - IM1</li>
+            </ul>
+          </section>
+        </aside>
+        
+        <!-- Right Column -->
+        <main class="right-column">
+          <section class="section">
+            <h2><i class="fas fa-briefcase"></i> 경력</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                  <h4>기술과디자인연구센터 <span>선임연구원</span></h4>
+                  <p class="timeline-period">2022.04 ~ 2024.08 (2년 5개월)</p>
+                  <div class="timeline-content">
+                      <ul>
+                          <li>미래 모빌리티 관련 정부/산학 과제 PM 및 연구 수행</li>
+                          <li>자율주행차 UX/UI, PBV 사용성, HMI 기술 연구</li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <h4>빙그레 <span>생산기술팀 사원</span></h4>
+                  <p class="timeline-period">2018.12 ~ 2021.11 (3년)</p>
+                  <div class="timeline-content">
+                      <ul>
+                          <li>설비 투자 프로젝트 기획, 추진, 관리</li>
+                          <li>생산 부문 디지털 트윈(Digital Twin) 업무</li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                    <h4>의무경찰 <span>운전요원</span></h4>
+                    <p class="timeline-period">2012.03 ~ 2013.12 (1년 9개월)</p>
+                </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2><i class="fas fa-tasks"></i> 주요 경험 및 프로젝트</h2>
+            <h3>산학협력 프로젝트</h3>
+            <div class="project-card">
+              <h4>PBV 사용성 및 설계 기준 수립</h4>
+              <div class="project-meta"><span><i class="far fa-building"></i> 현대자동차</span> <span><i class="far fa-calendar-alt"></i> 2024.03~12</span></div>
+              <p><strong>역할:</strong> 선임연구원<br><strong>성과:</strong> PBV 설계 및 기술개발 기준 수립. 러기지/승객석 사용성 및 상품성 기준 개발.</p>
+            </div>
+            <div class="project-card">
+                <h4>가상환경 유저빌리티 솔루션 개발</h4>
+                <div class="project-meta"><span><i class="far fa-building"></i> 현대자동차</span> <span><i class="far fa-calendar-alt"></i> 2023.01~12</span></div>
+                <p><strong>역할:</strong> PM (실무 총괄)<br><strong>성과:</strong> VRED 기반 가상환경 실험 및 평가 시나리오 체계화.</p>
+            </div>
+            <div class="project-card">
+              <h4>자율주행 안전교육 제도 연구</h4>
+              <div class="project-meta"><span><i class="far fa-building"></i> 국토교통부</span> <span><i class="far fa-calendar-alt"></i> 2022.08~11</span></div>
+              <p><strong>역할:</strong> 선임연구원<br><strong>성과:</strong> 자율주행차 안전 교육/매뉴얼 개발 및 법규 근거자료 마련.</p>
+            </div>
+            
+            <h3>개인/팀 프로젝트</h3>
+            <div style=" cursor: pointer;" onclick="window.open('https://patentimages.storage.googleapis.com/d1/36/42/32545a6ae314e8/KR101845804B1.pdf')" class="project-card">
+              <h4>IoT 스마트 수도꼭지 시스템 (특허 등록)</h4>
+              <p>Arduino와 무선 통신을 활용하여 앱으로 제어 가능한 시스템을 개발하여 특허 등록 (2018.03)</p>
+            </div>
+            <div class="project-card">
+              <h4>메타버스 커뮤니티 앱 [새싹광장]</h4>
+              <p>SK mySUNI Challenge: 도시 텃밭 사용자를 위한 메타버스 플랫폼 서비스 기획 및 프로토타이핑</p>
+            </div>
+             <div class="project-card">
+              <h4>Java 영문 타자연습 프로그램</h4>
+              <p>MVC 패턴 및 JDBC를 활용하여 Oracle DB와 연동되는 콘솔 프로그램 개발</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2><i class="fas fa-book"></i> 연구 경험</h2>
+            <div style=" cursor: pointer;" onclick="window.open('https://kookmin.dcollection.net/public_resource/pdf/200000812594_20250811201427.pdf')" class="project-card">              
+              <h4>석사학위 논문 (2024)</h4>
+              <p>가상현실(VR) 내 차량 실내 사용성 평가에서 현존감(Presence) 향상을 위한 가이드라인 개발</p>
+            </div>
+            <div class="project-card">
+              <h4>학술대회 논문 (2건)</h4>
+              <ul>
+                  <li>자율주행차 모니터링 시스템 고려요소 분석 (한국감성과학회, 2022)</li>
+                  <li>빅데이터 기반 UAM 사회적 인식 분석 (한국HCI학회, 2023)</li>
+              </ul>
+            </div>
+          </section>
+        </main>
+      </div>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 황제윤. All Rights Reserved.</p>
+    </footer>
   </div>
-  <script>
-    // 아코디언 JS
-    document.querySelectorAll('.accordion').forEach(btn => {
-      btn.addEventListener('click', function() {
-        this.classList.toggle('open');
-        let panel = this.nextElementSibling;
-        panel.classList.toggle('open');
-      });
-    });
-  </script>
+
 </body>
 </html>
-
