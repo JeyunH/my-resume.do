@@ -189,14 +189,33 @@
     .project-card ul { padding-left: 20px; margin-top: 10px; }
     .project-card strong { color: var(--primary-color); }
     /* --- Certifications --- */
-    .cert-list { padding-left: 20px; }
-    .cert-list li { margin-bottom: 8px; }
+    .cert-list {
+        padding-left: 0; /* 기존 padding 제거 */
+        list-style-type: none; /* 기본 list-style 제거 */
+    }
+    .cert-list li {
+        margin-bottom: 12px;
+        font-size: 1.05em;
+        padding: 10px 15px;
+        border-left: 4px solid var(--border-color);
+        background: #fcfcfc;
+        
+        /* Flexbox로 양쪽 정렬 */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s;
+    }
+    .cert-list li:hover {
+        border-left-color: var(--primary-color);
+    }
+    
     .cert-date {
-    font-size: 0.9em;
-    font-style: italic;
-    color: #777;
-    margin-left: 15px; /* 이름과 날짜 사이 최소 간격 */
-    white-space: nowrap; /* 날짜가 줄바꿈되지 않도록 */
+        font-size: 0.9em;
+        font-style: italic;
+        color: #777;
+        margin-left: 15px; /* 이름과 날짜 사이 최소 간격 */
+        white-space: nowrap; /* 날짜가 줄바꿈되지 않도록 */
     }
     /* --- Footer --- */
     footer {
