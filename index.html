@@ -191,7 +191,13 @@
     /* --- Certifications --- */
     .cert-list { padding-left: 20px; }
     .cert-list li { margin-bottom: 8px; }
-    .cert-date span { font-size: 0.9em; color: #777; margin-bottom: 10px; font-style: italic; }
+    .cert-date {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #777;
+    margin-left: 15px; /* 이름과 날짜 사이 최소 간격 */
+    white-space: nowrap; /* 날짜가 줄바꿈되지 않도록 */
+    }
     /* --- Footer --- */
     footer {
       text-align: center; padding: 25px; background: var(--light-gray);
