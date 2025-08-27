@@ -1,3 +1,3 @@
 # my-resume.do
-Let me introduce myself.
+이력서 링크 ->
 https://jeyunh.github.io/my-resume.do/
