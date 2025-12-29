@@ -83,19 +83,29 @@
     .main-content {
       padding: 40px 50px;
     }
-    /* --- Full-width About Section --- */
+    /* --- Full-width About Section 수정 --- */
     .about-section-fullwidth {
-      margin-bottom: 40px;
-      text-align: center;
+        margin: -40px -50px 40px -50px; /* 상단과 양옆의 부모 패딩을 상쇄 */
+        background: #e4f1fa;           /* 섹션 전체 배경색 */
+        padding: 40px 50px;            /* 내부 콘텐츠를 위한 패딩 다시 부여 */
+        border-left: 8px solid var(--primary-color); /* 강조 포인트 */
     }
+    
+    .about-section-fullwidth h2 {
+        border-bottom: none;           /* 섹션 전체 배경이 있으므로 하단 선 제거 */
+        margin-bottom: 15px;
+        padding-bottom: 0;
+    }
+    
     .about-section-fullwidth p {
-        font-size: 1.1em;
-        display: inline-block;
+        font-size: 1.15em;
+        display: block;                /* 너비를 가득 채우도록 변경 */
         text-align: left;
-        padding: 15px 25px;
-        background: #e4f1fa;
-        border-radius: 8px;
-        border-left: 5px solid var(--primary-color);
+        margin: 0;
+        line-height: 1.8;
+        background: transparent;       /* p 태그 자체 배경은 제거 */
+        padding: 0;
+        border-left: none;             /* 섹션 레벨에서 보더를 줬으므로 제거 */
     }
     /* --- 2-Column Grid --- */
     .main-grid {
@@ -252,12 +262,12 @@
     
     <main class="main-content">
       <!-- Full-width About Section -->
-      <section class="section about-section-fullwidth">
+      <section class="about-section-fullwidth">
         <h2><i class="fas fa-user"></i> About</h2>
         <p>
           <strong>H/W 설계 역량과 AI 소프트웨어 기술력을 겸비한 AI 로보틱스 기술 전략가입니다.</strong><br>
           기계공학 전공 후 제조 현장 최적화를 경험하고, AI 디자인 석사 및 SW 전문 과정을 통해 융합적 전문성을 쌓았습니다.<br>
-          현재는 CTO로서 AI 기반의 로보틱스 솔루션을 총괄하며, 복잡한 기술을 직관적인 사용자 경험(UX)으로 전환하여<br>실질적인 문제를 해결하는 제품을 만듭니다.
+          현재는 CTO로서 AI 기반의 로보틱스 솔루션을 총괄하며, 복잡한 기술을 직관적인 사용자 경험(UX)으로 전환하여 실질적인 문제를 해결하는 제품을 만듭니다.
         </p>
       </section>
 
